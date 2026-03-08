@@ -139,8 +139,8 @@ public class AddressBookApplication {
 				}
 			}
 
-			case 5 -> {
-
+			case 5 ->  {
+       
 				System.out.print("Enter Address Book Name: ");
 				String bookName = scanner.nextLine();
 
@@ -182,7 +182,7 @@ public class AddressBookApplication {
 
 				stateMap.forEach((state, persons) -> {
 					System.out.println("\nState: " + state);
-					persons.forEach(System.out::println);
+					persons.forEach(System.out::println);   
 				});
 			}
 
