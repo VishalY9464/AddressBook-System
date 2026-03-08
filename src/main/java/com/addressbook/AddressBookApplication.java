@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.addressbook.model.Person;
-import com.addressbook.service.AddressBook;    
+import com.addressbook.service.AddressBook;
 
 @SpringBootApplication
 public class AddressBookApplication {
@@ -45,7 +45,7 @@ public class AddressBookApplication {
 		System.out.print("Enter Email: ");
 		String email = scanner.nextLine();
 
-		Person person = new Person(firstName, lastName, address, city, state, zip, phone, email);
+		Person person = new Person(firstName, lastName, address, city, state, zip, phone, email); 
 
 		addressBook.addContact(person);
 
@@ -54,14 +54,13 @@ public class AddressBookApplication {
 		String name = scanner.nextLine();
 
 		addressBook.editContact(name);
-		
-		
+
 		// UC4: Delete Contact
 		System.out.print("Enter name to delete contact: ");
 		String deleteName = scanner.nextLine();
 
 		addressBook.deleteContact(deleteName);
 
-		scanner.close();
+		scanner.close(); 
 	}
 }
