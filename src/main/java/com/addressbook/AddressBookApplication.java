@@ -45,7 +45,7 @@ public class AddressBookApplication {
 		System.out.print("Enter Email: ");
 		String email = scanner.nextLine();
 
-		Person person = new Person(firstName, lastName, address, city, state, zip, phone, email);
+		Person person = new Person(firstName, lastName, address, city, state, zip, phone, email); 
 
 		addressBook.addContact(person);
 
@@ -55,6 +55,12 @@ public class AddressBookApplication {
 
 		addressBook.editContact(name);
 
-		scanner.close();
+		// UC4: Delete Contact
+		System.out.print("Enter name to delete contact: ");
+		String deleteName = scanner.nextLine();
+
+		addressBook.deleteContact(deleteName);
+
+		scanner.close(); 
 	}
 }
